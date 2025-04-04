@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Wahil Muleta | Compute Science Portfolio</title>
+  <link rel="stylesheet" href="styles.css" />
+  <script>
+    function toggleDarkMode() {
+      document.body.classList.toggle("dark-mode");
+    }
+
+    function toggleEmailForm() {
+      const form = document.getElementById("email-form");
+      form.style.display = form.style.display === "none" ? "block" : "none";
+    }
+  </script>
+</head>
+<body>
+  <header>
+    <h1>Wahil Muleta</h1>
+    <p>Computer Science Student | Junior Pentester</p>
+    <label class="switch">
+      <input type="checkbox" onclick="toggleDarkMode()">
+      <span class="slider round"></span>
+    </label>
+  </header>
+
+  <section id="about">
+    <h2>About Me</h2>
+    <p>Technically skilled computer science student pursuing an associate’s degree at Century College, with a strong foundation in programming (C++, Python, HTML/CSS) and cybersecurity principles, including penetration testing, password cracking, and Docker. Experienced in both academic and professional settings, providing technical support, assisting with instructional activities, and delivering exceptional customer service. Adept at troubleshooting, problem-solving, and collaborating within a team environment. Strong base in analytical thinking, attention to detail, and clear communication, with a passion for applying technical knowledge to real-world challenges.</p>
+  </section>
+
+  <section id="resume" class="resume-section">
+    <h2>Resume</h2>
+    <p><a href="Resume%20MDS.docx" class="btn" target="_blank">Download My Resume (DOCX)</a></p>
+
+    <h3>Wahil Muleta</h3>
+    <p>3515 Century Ave N, Apt 213<br>White Bear Lake, MN 55110<br>240-946-1875 | Wahiladamu04@gmail.com</p>
+
+    <h3>Education</h3>
+    <h4>Century College, White Bear Lake, MN</h4>
+    <p>Computer Science Associate’s Degree, expected 5/2026</p>
+
+    <h3>Experience</h3>
+    <h4>Boston Scientific, Arden Hills, MN</h4>
+    <p><strong>Medical Device Specialist</strong> | June 2024 – March 2025</p>
+    <ul>
+      <li>Technical troubleshooting and calibration of silicone injection presses</li>
+      <li>Inspections and defect documentation</li>
+      <li>Escalate complex technical issues</li>
+      <li>Maintain system performance records</li>
+    </ul>
+
+    <h4>Century College – Welding Department</h4>
+    <p><strong>Student Support</strong> | January 2024 – May 2024</p>
+    <ul>
+      <li>Technical support for students and faculty</li>
+      <li>Lab equipment setup and configuration</li>
+      <li>Tool organization</li>
+      <li>Student technical guidance</li>
+    </ul>
+
+    <h4>Walmart, White Bear Lake, MN</h4>
+    <p><strong>Customer Support Associate</strong> | October 2023 – June 2024</p>
+    <ul>
+      <li>Order and product support</li>
+      <li>Internal system usage</li>
+      <li>Team collaboration</li>
+      <li>Quality control</li>
+    </ul>
+
+    <h3>Certifications & Skills</h3>
+    <ul>
+      <li>ISC2 Certified in Cybersecurity (CC)</li>
+      <li>Introduction to Cybersecurity (penetration testing, password cracking)</li>
+      <li>Intermediate Cybersecurity</li>
+      <li>Web Development: HTML, CSS, Bootstrap</li>
+    </ul>
+  </section>
+
+  <section id="contact">
+    <h2>Contact</h2>
+    <div class="contact-links">
+      <a href="https://github.com/yourusername" target="_blank">GitHub</a>
+      <a href="https://linkedin.com/in/yourusername" target="_blank">LinkedIn</a>
+      <a href="#" onclick="toggleEmailForm()">Email</a>
+    </div>
+    <div id="email-form" style="display:none;">
+      <form action="mailto:Wahiladamu04@gmail.com" method="post" enctype="text/plain">
+        <label for="name">Name:</label><br>
+        <input type="text" id="name" name="name" required><br><br>
+        <label for="message">Message:</label><br>
+        <textarea id="message" name="message" rows="4" required></textarea><br><br>
+        <input type="submit" class="btn" value="Send">
+      </form>
+    </div>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Wahil Muleta</p>
+  </footer>
+</body>
+</html>

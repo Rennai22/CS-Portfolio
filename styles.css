@@ -1,0 +1,175 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f5f5f5;
+    color: #333;
+    transition: background-color 0.3s, color 0.3s;
+  }
+  
+  header, footer {
+    background-color: #111;
+    color: #fff;
+    padding: 2rem 1rem;
+    text-align: center;
+  }
+  
+  header h1 {
+    margin: 0;
+    font-size: 2.5rem;
+  }
+  
+  header p {
+    font-size: 1.2rem;
+  }
+  
+  section {
+    max-width: 800px;
+    margin: 2rem auto;
+    padding: 0 1rem;
+  }
+  
+  h2 {
+    border-bottom: 2px solid #ddd;
+    padding-bottom: 0.5rem;
+    font-size: 1.8rem;
+  }
+  
+  h3 {
+    font-size: 1.5rem;
+    margin-top: 1.5rem;
+  }
+  
+  h4 {
+    font-size: 1.2rem;
+    margin-bottom: 0.2rem;
+  }
+  
+  .btn {
+    display: inline-block;
+    padding: 0.7rem 1.2rem;
+    background-color: #333;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.2s ease-in-out;
+    cursor: pointer;
+  }
+  
+  .btn:hover {
+    background-color: #555;
+  }
+  
+  .contact-links a {
+    margin: 0 0.5rem;
+    color: white;
+    text-decoration: none;
+  }
+  
+  .contact-links a:hover {
+    text-decoration: underline;
+  }
+  
+  .resume-section ul {
+    padding-left: 1.2rem;
+  }
+  
+  .resume-section li {
+    margin-bottom: 0.5rem;
+  }
+  
+  .resume-section pre {
+    white-space: pre-wrap;
+    background-color: #eee;
+    padding: 1rem;
+    border-radius: 8px;
+  }
+  
+  /* Dark Mode */
+  body.dark-mode {
+    background-color: #1e1e1e;
+    color: #f5f5f5;
+  }
+  
+  body.dark-mode .resume-section pre {
+    background-color: #333;
+    color: #f5f5f5;
+  }
+  
+  body.dark-mode .btn {
+    background-color: #f5f5f5;
+    color: #111;
+  }
+  
+  body.dark-mode .btn:hover {
+    background-color: #ccc;
+  }
+  
+  body.dark-mode header,
+  body.dark-mode footer {
+    background-color: #000;
+    color: #f5f5f5;
+  }
+  
+  body.dark-mode .contact-links a {
+    color: #f5f5f5;
+  }
+  
+  /* Toggle Switch */
+  .switch {
+    position: relative;
+    display: inline-block;
+    width: 50px;
+    height: 24px;
+    margin-left: 1rem;
+  }
+  
+  .switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+  }
+  
+  .slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    transition: 0.4s;
+    border-radius: 24px;
+  }
+  
+  .slider:before {
+    position: absolute;
+    content: "";
+    height: 18px;
+    width: 18px;
+    left: 3px;
+    bottom: 3px;
+    background-color: white;
+    transition: 0.4s;
+    border-radius: 50%;
+  }
+  
+  input:checked + .slider {
+    background-color: #2196F3;
+  }
+  
+  input:checked + .slider:before {
+    transform: translateX(26px);
+  }
+  
+  /* Email Form */
+  #email-form {
+    margin-top: 1rem;
+    background-color: #eee;
+    padding: 1rem;
+    border-radius: 8px;
+  }
+  
+  body.dark-mode #email-form {
+    background-color: #333;
+  }
+  
