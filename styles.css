@@ -35,13 +35,21 @@ body {
   }
   
   h3 {
-    font-size: 1.5rem;
+    font-size: 1.75rem;
     margin-top: 1.5rem;
   }
   
   h4 {
     font-size: 1.2rem;
     margin-bottom: 0.2rem;
+
+  }
+  #company {
+font-family:'Times New Roman', Times, serif;
+font-size: 150%;
+  }
+  li {
+font-style: italic;
   }
   
   .btn {
@@ -61,7 +69,7 @@ body {
   
   .contact-links a {
     margin: 0 0.5rem;
-    color: white;
+    color: rgb(6, 78, 103);
     text-decoration: none;
   }
   
@@ -71,10 +79,12 @@ body {
   
   .resume-section ul {
     padding-left: 1.2rem;
+    
   }
   
   .resume-section li {
     margin-bottom: 0.5rem;
+    font-style: italic;
   }
   
   .resume-section pre {
@@ -111,7 +121,7 @@ body {
   }
   
   body.dark-mode .contact-links a {
-    color: #f5f5f5;
+    color: #01316f;
   }
   
   /* Toggle Switch */
@@ -164,7 +174,7 @@ body {
   /* Email Form */
   #email-form {
     margin-top: 1rem;
-    background-color: #eee;
+    background-color: #eeeeee;
     padding: 1rem;
     border-radius: 8px;
   }
