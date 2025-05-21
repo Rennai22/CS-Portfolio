@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Wahil Muleta | Compute Science Portfolio</title>
+  <title>Wahil Muleta | Cybersecurity Portfolio</title>
   <link rel="stylesheet" href="styles.css" />
   <script>
     function toggleDarkMode() {
@@ -14,9 +14,108 @@
       const form = document.getElementById("email-form");
       form.style.display = form.style.display === "none" ? "block" : "none";
     }
+
+    function toggleMenu() {
+      const menu = document.getElementById("sidebar-menu");
+      const burger = document.querySelector('.burger');
+      menu.classList.toggle("open");
+      burger.classList.toggle("open");
+    }
+
+    function closeMenu() {
+      const menu = document.getElementById("sidebar-menu");
+      const burger = document.querySelector('.burger');
+      menu.classList.remove("open");
+      burger.classList.remove("open");
+    }
+
+    window.addEventListener("DOMContentLoaded", () => {
+      const links = document.querySelectorAll("#sidebar-menu a");
+      links.forEach(link => {
+        link.addEventListener("click", () => {
+          closeMenu();
+        });
+      });
+    });
   </script>
+  <style>
+    .burger {
+      position: fixed;
+      top: 20px;
+      left: 20px;
+      z-index: 1001;
+      width: 30px;
+      height: 24px;
+      cursor: pointer;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+    .burger span {
+      height: 4px;
+      background: #fff;
+      border-radius: 2px;
+      transition: 0.3s ease-in-out;
+    }
+    .burger.open span:nth-child(1) {
+      transform: rotate(45deg) translateY(10px);
+    }
+    .burger.open span:nth-child(2) {
+      opacity: 0;
+    }
+    .burger.open span:nth-child(3) {
+      transform: rotate(-45deg) translateY(-10px);
+    }
+    #sidebar-menu {
+      position: fixed;
+      top: 0;
+      left: -220px;
+      width: 200px;
+      height: 100%;
+      background: rgba(17, 17, 17, 0.95);
+      backdrop-filter: blur(8px);
+      padding-top: 60px;
+      transition: left 0.3s ease;
+      z-index: 1000;
+    }
+    #sidebar-menu.open {
+      left: 0;
+    }
+    #sidebar-menu a {
+      display: block;
+      padding: 15px;
+      color: white;
+      text-decoration: none;
+      transition: background 0.2s;
+    }
+    #sidebar-menu a:hover {
+      background-color: #444;
+    }
+    @media (max-width: 600px) {
+      header h1 {
+        font-size: 1.8rem;
+      }
+      header p {
+        font-size: 1rem;
+      }
+    }
+  </style>
 </head>
 <body>
+  <div class="burger" onclick="toggleMenu()">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+
+  <nav id="sidebar-menu">
+    <a href="#about">About Me</a>
+    <a href="#resume">Resume</a>
+    <a href="#certifications">Certifications</a>
+    <a href="#projects">Projects</a>
+    <a href="#contact">Contact</a>
+  </nav>
+
   <header>
     <h1>Wahil Muleta</h1>
     <p>Computer Science Student | Junior Pentester</p>
@@ -39,39 +138,53 @@
     <p>3515 Century Ave N, Apt 213<br>White Bear Lake, MN 55110<br>240-946-1875 | Wahiladamu04@gmail.com</p>
 
     <h3>Education</h3>
-    <h4>Century College, White Bear Lake, MN</h4>
+    <h4 id="company">Century College, White Bear Lake, MN</h4>
     <p>Computer Science Associate’s Degree, expected 5/2026</p>
 
     <h3>Experience</h3>
-    <h4>Boston Scientific, Arden Hills, MN</h4>
+    <h4 id="company">Banner Engineering, Brooklyn Park, MN</h4>
+    <p><strong>Electronics Diagnostics & Firmware Technician</strong> (March 2025 – Present)</p>
+    <ul>
+      <li>Program and troubleshoot devices by uploading bootloaders and firmware via serial interfaces and flashing tools, ensuring compatibility and proper hardware-software integration.</li>
+      <li>Perform diagnostic testing on electronic modules including temperature stress tests, surge protection validation, and power stability analysis to identify failure points.</li>
+      <li>Collaborate with engineers to resolve hardware-software interaction issues, leveraging knowledge of control systems, embedded logic, and signal processing to ensure robust device behaviour.</li>
+      <li>Debug and correct firmware upload failures, peripheral miscommunications, and digital signal integrity problems, often requiring step-by-step fault isolation and structured problem-solving.</li>
+      <li>Maintain comprehensive documentation of testing procedures, firmware versions, and failure resolutions, contributing to traceability, version control, and process reproducibility.</li>
+      <li>Supported minor automation tasks and quality assurance processes, enhancing workflow efficiency and reducing human error in repetitive diagnostics.</li>
+    </ul>
+  </section>
+    <h4 id="company">Boston Scientific, Arden Hills, MN</h4>
     <p><strong>Medical Device Specialist</strong> | June 2024 – March 2025</p>
     <ul>
-      <li>Technical troubleshooting and calibration of silicone injection presses</li>
-      <li>Inspections and defect documentation</li>
-      <li>Escalate complex technical issues</li>
-      <li>Maintain system performance records</li>
+      <li>Perform technical troubleshooting and calibration of silicone injection presses to ensure optimal functionality.</li>
+      <li>Conduct thorough inspections, identifying and documenting defects for further analysis and resolution.</li>
+      <li>Escalate complex technical issues to appropriate teams, ensuring minimal downtime and continuous improvement.</li>
+      <li>Maintain meticulous records of system performance, troubleshooting steps, and corrective actions.</li>
     </ul>
 
-    <h4>Century College – Welding Department</h4>
+    <h4 id="company">Century College – Welding Department</h4>
     <p><strong>Student Support</strong> | January 2024 – May 2024</p>
     <ul>
-      <li>Technical support for students and faculty</li>
-      <li>Lab equipment setup and configuration</li>
-      <li>Tool organization</li>
-      <li>Student technical guidance</li>
+      <li>Provided technical support to students and faculty, troubleshooting equipment issues to maintain a smooth learning environment.</li>
+      <li>Assisted in setting up and configuring lab equipment, ensuring proper functionality and safety compliance.</li>
+      <li>Maintained and organized department tools and systems, ensuring readiness for instructional use.</li>
+      <li>Helped students with technical challenges, reinforcing troubleshooting methodologies and best practices.</li>
     </ul>
 
-    <h4>Walmart, White Bear Lake, MN</h4>
+    <h4 id="company">Walmart, White Bear Lake, MN</h4>
     <p><strong>Customer Support Associate</strong> | October 2023 – June 2024</p>
     <ul>
-      <li>Order and product support</li>
-      <li>Internal system usage</li>
-      <li>Team collaboration</li>
-      <li>Quality control</li>
+      <li>Delivered high-quality customer support by assisting with order issues, product concerns, and resolving complaints.</li>
+      <li>Utilized internal systems to track, update, and manage customer requests efficiently.</li>
+      <li>Communicated effectively with customers and team members to ensure seamless issue resolution.</li>
+      <li>Maintained accuracy in order selection and quality to meet customer satisfaction goals.</li>
     </ul>
+  </section>
 
-    <h3>Certifications & Skills</h3>
+  <section id="certifications">
+    <h2>Certifications</h2>
     <ul>
+      <li>CompTIA A+</li>
       <li>ISC2 Certified in Cybersecurity (CC)</li>
       <li>Introduction to Cybersecurity (penetration testing, password cracking)</li>
       <li>Intermediate Cybersecurity</li>
@@ -79,11 +192,23 @@
     </ul>
   </section>
 
+  <section id="projects">
+    <h2>Projects</h2>
+    <h3>Advanced Python Port Scanner</h3>
+    <p>A multithreaded TCP/UDP port scanner written in Python with banner grabbing, HTML report generation, and performance tracking. It demonstrates how cybersecurity tools work under the hood and offers a great intro to networking fundamentals.</p>
+    <ul>
+      <li><strong>Features:</strong> TCP & UDP scanning, banner grabbing, threading, HTML export</li>
+      <li><strong>Tools:</strong> Python, socket, threading, datetime</li>
+      <li><a href="scan_results.html" target="_blank">🔍 View Sample Scan Output</a></li>
+      <li><a href="port_scanner.py" download>📄 Download Python Script</a></li>
+    </ul>
+  </section>
+
   <section id="contact">
     <h2>Contact</h2>
     <div class="contact-links">
-      <a href="https://github.com/yourusername" target="_blank">GitHub</a>
-      <a href="https://linkedin.com/in/yourusername" target="_blank">LinkedIn</a>
+      <a href="https://github.com/Rennai22" target="_blank">GitHub</a>
+      <a href="https://linkedin.com/in/Wahiladamu04" target="_blank">LinkedIn</a>
       <a href="#" onclick="toggleEmailForm()">Email</a>
     </div>
     <div id="email-form" style="display:none;">
